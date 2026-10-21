@@ -1,0 +1,2 @@
+system,temp,role,first_part,last_part,n_available_parts,actual_min_frame,actual_max_frame,chain_len,mean_contact_number,mean_contact_number_per_bead,relax_time_ns,relax_ci_low_ns,relax_ci_high_ns,n_segments,n_filled,phase_stride,phase_dt_ns,cutoff_nm,threshold
+TDP43,260K,Tl,81,150,150,80000,148535,148,112.109192,nan,7.078691,5.547416,10.026902,30,28396,5,0.100000,0.660000,0.200000

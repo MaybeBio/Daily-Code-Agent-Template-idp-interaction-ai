@@ -1,0 +1,149 @@
+{
+ "SASDH84": {
+  "class": "folded",
+  "length": 135,
+  "chi2": {
+   "raw": 2.331008037531264,
+   "operating": 1.9124080614037113,
+   "alphafold": 2.2542440498362155
+  },
+  "chi2_minimum": 1.1537483511480533,
+  "phi_operating": 0.9601866085269983,
+  "phi_minimum": 0.021411306405843007,
+  "operating_is_raw": false,
+  "operating_reached": true,
+  "rg_exp": 21.196169696143176,
+  "rg_raw": 19.80444599031161,
+  "rg_operating": 20.021974660633045,
+  "rg_minimum": 20.823769674448062,
+  "top_conformer": 56,
+  "top_weight": 0.5672896721745385,
+  "ca_inside_envelope": 0.8888888888888888,
+  "ca_inside_support_surface": 0.9925925925925926,
+  "density_levels": [
+   {
+    "name": "particle",
+    "volume_A3": 51840.444299999996,
+    "iso_over_max": 0.2091409786292968,
+    "ca_inside": 0.9925925925925926
+   },
+   {
+    "name": "protein",
+    "volume_A3": 26301.601000000006,
+    "iso_over_max": 0.43174382060516836,
+    "ca_inside": 0.8888888888888888
+   }
+  ],
+  "chain_breaks": 0,
+  "n_points": 1324,
+  "n_points_positive": 1324,
+  "isovalue_volume_A3": 26301.601000000006,
+  "support_volume_A3": 51840.444299999996,
+  "denss": {
+   "dmax_A": 67.30000000000001,
+   "n_maps": 10,
+   "chi2_median": 1.2115,
+   "resolution_A": 25.1,
+   "maps_accepted": 9,
+   "rg_per_map_mean": 23.1109
+  }
+ },
+ "SASDM65": {
+  "class": "partly disordered",
+  "length": 292,
+  "chi2": {
+   "raw": 4.336348587679039,
+   "operating": 1.9674358177010478,
+   "alphafold": 28.91742262704262
+  },
+  "chi2_minimum": 0.985919347237367,
+  "phi_operating": 0.8971186072336009,
+  "phi_minimum": 0.08044337291016981,
+  "operating_is_raw": false,
+  "operating_reached": true,
+  "rg_exp": 35.862684366923666,
+  "rg_raw": 37.291842641975904,
+  "rg_operating": 36.15684940963387,
+  "rg_minimum": 35.83115508158354,
+  "top_conformer": 42,
+  "top_weight": 0.25327654563555024,
+  "ca_inside_envelope": 0.5958904109589042,
+  "ca_inside_support_surface": 0.863013698630137,
+  "density_levels": [
+   {
+    "name": "particle",
+    "volume_A3": 161136.1589,
+    "iso_over_max": 0.15725755350891,
+    "ca_inside": 0.863013698630137
+   },
+   {
+    "name": "protein",
+    "volume_A3": 55410.616000000045,
+    "iso_over_max": 0.3552899698496289,
+    "ca_inside": 0.5958904109589042
+   }
+  ],
+  "chain_breaks": 5,
+  "n_points": 1186,
+  "n_points_positive": 1186,
+  "isovalue_volume_A3": 55410.616000000045,
+  "support_volume_A3": 161136.1589,
+  "denss": {
+   "dmax_A": 151.0,
+   "n_maps": 10,
+   "chi2_median": 3.7005,
+   "resolution_A": 32.4,
+   "maps_accepted": 9,
+   "rg_per_map_mean": 34.9497
+  }
+ },
+ "SASDLK9": {
+  "class": "disordered",
+  "length": 475,
+  "chi2": {
+   "raw": 8.888180348544271,
+   "operating": 1.802935282789506,
+   "alphafold": 115.55288840074233
+  },
+  "chi2_minimum": 0.9269574939673051,
+  "phi_operating": 0.8362509609042056,
+  "phi_minimum": 0.08505627087424042,
+  "operating_is_raw": false,
+  "operating_reached": true,
+  "rg_exp": 71.66806527509094,
+  "rg_raw": 78.27335496516739,
+  "rg_operating": 75.18201822684824,
+  "rg_minimum": 71.73365056727668,
+  "top_conformer": 57,
+  "top_weight": 0.24115648475676277,
+  "ca_inside_envelope": 0.13052631578947368,
+  "ca_inside_support_surface": 0.6357894736842106,
+  "density_levels": [
+   {
+    "name": "particle",
+    "volume_A3": 998957.8125,
+    "iso_over_max": 0.17195817572841696,
+    "ca_inside": 0.6357894736842106
+   },
+   {
+    "name": "protein",
+    "volume_A3": 89375.83400000022,
+    "iso_over_max": 0.6350448990792018,
+    "ca_inside": 0.13052631578947368
+   }
+  ],
+  "chain_breaks": 24,
+  "n_points": 230,
+  "n_points_positive": 230,
+  "isovalue_volume_A3": 89375.83400000022,
+  "support_volume_A3": 998957.8125,
+  "denss": {
+   "dmax_A": 240.0,
+   "n_maps": 10,
+   "chi2_median": 1.475,
+   "resolution_A": 64.0,
+   "maps_accepted": 9,
+   "rg_per_map_mean": 69.63119999999999
+  }
+ }
+}

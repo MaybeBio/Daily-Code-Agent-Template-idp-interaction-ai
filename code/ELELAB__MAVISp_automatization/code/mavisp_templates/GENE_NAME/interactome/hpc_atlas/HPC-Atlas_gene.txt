@@ -1,0 +1,1 @@
+/home/runner/.cache/degit/github/ELELAB/MAVISp_automatization/extract-Wo5cDX/mavisp_templates/GENE_NAME/interactome/hpc_atlas/data/databases/hpc_atlas/HPC-Atlas_gene.txt

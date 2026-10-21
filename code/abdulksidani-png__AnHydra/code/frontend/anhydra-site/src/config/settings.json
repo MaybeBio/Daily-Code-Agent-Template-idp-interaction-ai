@@ -1,0 +1,54 @@
+{
+  "site": {
+    "lang": "en",
+    "meta": [],
+    "links": [],
+    "scripts": []
+  },
+  "routes": {
+    "/": {
+      "meta": [
+        {
+          "title": "AnHydra"
+        },
+        {
+          "name": "description",
+          "content": "Tardigrades lose nearly all their water and return to life. AnHydra screens protein sequences for the families that make that possible."
+        }
+      ]
+    },
+    "/screen": {
+      "meta": [
+        {
+          "title": "AnHydra-screen"
+        },
+        {
+          "name": "description",
+          "content": "Paste a protein sequence and see whether it resembles the desiccation-protective families (CAHS, LEA, dehydrins). Family-membership triage built on ESM-2."
+        }
+      ]
+    },
+    "/about": {
+      "meta": [
+        {
+          "title": "AnHydra-about"
+        },
+        {
+          "name": "description",
+          "content": "The team behind AnHydra and the science of desiccation-protective proteins."
+        }
+      ]
+    },
+    "/privacy": {
+      "meta": [
+        {
+          "title": "AnHydra-privacy"
+        },
+        {
+          "name": "description",
+          "content": "What AnHydra collects when you sign in and screen a sequence, and where it goes."
+        }
+      ]
+    }
+  }
+}

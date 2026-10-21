@@ -1,0 +1,4 @@
+system,tau_tl_ns,tau_th_ns,ratio_th_over_tl,ratio_ci_low,ratio_ci_high,threshold,n_segments_tl,n_segments_th,n_bootstrap,n_finite_bootstrap,method
+FUS,8.10604597,15.27152658,1.88396743,1.15216587,2.67269547,0.200000,29,29,10000,10000,independent_segment_acf_bootstrap_of_tH_over_tL_ratio
+A1,10.56726841,18.12524995,1.71522566,1.15697975,2.47863238,0.200000,39,40,10000,10000,independent_segment_acf_bootstrap_of_tH_over_tL_ratio
+TDP43,7.07869054,17.14606101,2.42220802,1.48330827,3.52714926,0.200000,30,40,10000,10000,independent_segment_acf_bootstrap_of_tH_over_tL_ratio

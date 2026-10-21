@@ -1,0 +1,89 @@
+{
+    "molecules": {
+        "zh": "您的分子类型有：",
+        "en": "Your molecules are:"
+    },
+    "not_valid_file": {
+        "zh": "不是一个有效的 XML 文件",
+        "en": "is not a valid xml file"
+    },
+    "no_valid_file": {
+        "zh": "没有有效的 XML 文件",
+        "en": "No valid XML file found"
+    },
+    "mass_density_message": 
+    {
+        "remove_pbc": {
+            "zh": "是否需要使用移除 PBC后的文件? (y/n)",
+            "en": "Do you want to use the file without condensate PBC? (y/n)"
+        },
+        "cover_free_chain_save_path": {
+            "zh": "是否需要覆盖已存在的自由链保存路径? (y/n) Do you want to cover the existing free chain save path? (y/n)",
+            "en": "Do you want to cover the existing free chain save path? (y/n)"
+        },
+        "calculate_molecules": {
+            "zh": "请输入您想要计算质量密度分布时需要包括的分子, 以逗号分隔, 如 \"1,2\"。\n如需计算全部分子, 请输入 all 或直接回车：",
+            "en": "Please input the molecules you want to calculate the mass density distribution for, separated by commas. If you want to calculate for all molecules, please input all or press enter."
+        },
+        "calculate_domain": {
+            "zh": "若只需要计算结构域，请输入该结构域的起始残基编号和末尾残基编号（从 1 开始），以-分隔，如 159-522, 否则请直接回车。注: 只支持选择单个分子计算。请输入：",
+            "en": "If you only want to calculate the mass density distribution for a specific domain, please input the start and end residue numbers of the domain, separated by a hyphen (-), e.g., 159-522. Otherwise, please press enter.\nNote: Only one molecule can be selected for calculation."
+        },
+        "name_domain": {
+            "zh": "是否给此结构域命名？请输入名称，否则直接回车：",
+            "en": "Do you want to name this domain? Please input the name, or press Enter directly."
+        },
+        "balance_cut": {
+            "zh": "请输入需要截取的平衡后的文件索引，格式为‘开始,结束’, 例如: 1000,2000, 直接回车则不截取: ",
+            "en": "Please input the balance cut index, in the format of 'start,end', e.g., 1000,2000. Press enter directly to not cut."
+        },
+        "calculate_mass_density_distribution_type": {
+            "zh": "可计算的质量密度分布类型有: sphere (球状凝聚体), axis (有取向的棒状凝聚体), slab (平板模拟)\n请输入需要计算的质量密度分布类型, 直接回车则计算 sphere 类型:",
+            "en": "Class of mass density distribution that can be calculated: sphere (sphere condensate) / axis (有取向的棒状凝聚体) / slab (slab model)\nPlease input the type of mass density distribution that you want to calculate, or press Enter directly to calculate sphere type: ",
+            "invalid": {
+                "zh": "请输入 sphere, axis, 或 slab 类型, 或直接回车计算 sphere 类型",
+                "en": "Invalid input. Please input sphere, axis, or slab. Press Enter directly to calculate sphere type."
+            }
+        },
+        "bin_size": {
+            "zh": "计算质量密度分布时使用的 bin 大小为",
+            "en": "The bin size of the mass density distribution is"
+        }       
+    },
+    "coordinates_processor_message": {
+        "remove_enm_bonds_request": {
+            "zh": "是否需要移除弹性键？(y/n)",
+            "en": "Do you want to remove elastic bonds? (y/n)"
+        },
+        "start_coordinate_extraction": {
+            "zh": "开始提取坐标...",
+            "en": "Starting coordinate extraction..."
+        },
+        "start_sequence_extraction": {
+            "zh": "开始提取序列信息...",
+            "en": "Starting sequence information extraction..."
+        },
+        "sequence_output": {
+            "zh": "序列信息已保存至文件",
+            "en": "Sequence information has been saved to file"
+        },
+        "remove_enm_bonds_ing": {
+            "zh": "正在移除弹性键...",
+            "en": "Removing elastic bonds..."
+        },
+        "remove_pbc_extraction_xyz": {
+            "zh": "正在移除 PBC 并提取坐标...",
+            "en": "Removing PBC and extracting coordinates..."
+        }
+    },
+    "contact_map_calculator_message": {
+        "calculate_contact_map": {
+            "zh": "开始计算 Contact Map...",
+            "en": "Starting to calculate Contact Map..."
+        },
+        "domain_select": {
+            "zh": "若只需要计算结构域，请输入该结构域的起始残基编号和末尾残基编号（从 1 开始），以-分隔，如 159-522。\n注: 仅限计算的分子类型相同的结构域，如0-0、1-1。如需计算不同分子类型的结构域，请另外计算。\n若有多个结构域，请以英文逗号分隔：",
+            "en": "If you only need to calculate the domain, please enter the starting residue number and the last residue number of the domain (starting from 1), separated by -, such as 159-522. \n Note: Only calculated domains with the same molecular type, such as 0-0 and 1-1.\n If there are multiple domains, please separate them with commas: "
+        }
+    }
+}

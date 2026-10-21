@@ -1,0 +1,42 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.DS_Store
+.ipynb_checkpoints/
+
+.env
+.venv/
+venv/
+env/
+
+wandb/
+output/
+outputs/
+checkpoints/
+checkpoint-*/
+runs/
+logs/
+
+*.log
+*.tmp
+
+pretrain*/
+finetune*/
+
+*.slurm
+slurm-*.out
+
+.vscode/
+
+analysis/
+
+cell_fm/tasks_local/
+
+scripts_local/
+
+huggingface_space
+# Lab-internal tooling: the asset builders read cluster data under /hpc/reference, and
+# upload_weights.py publishes the checkpoints and the model card to Hugging Face. What
+# these scripts produce is published; the scripts themselves are not part of the repo.
+notebooks/tools/

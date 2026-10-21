@@ -1,0 +1,109 @@
+# Vendored source (shallow clones, reproducible via scripts/setup_env.py)
+src/
+
+# Model weights (large, permanent-but-reproducible via scripts/setup_env.py)
+weights/
+
+# Per-backend virtualenvs (reproducible via scripts/setup_env.py)
+.venvs/
+.venv/
+
+# Run outputs and large data (structures, campaign results) — big and
+# reproducible by re-running the scripts; keep boltzgen_examples/ (small
+# reference YAML/CIF scaffolds) since those aren't reproducible from a
+# single source URL the same way.
+data/*
+!data/boltzgen_examples/
+
+# Cached reference sequences fetched from RCSB (reproducible via
+# experiments/fetch_reference.py); reference run outputs land under data/designs/
+# and are covered by the data/* rule above.
+experiments/reference_data/
+
+# Epitope-prediction training artifacts (large, reproducible via the scripts in
+# experiments/epitope_prediction/) — label caches, extracted-feature caches, trained
+# model checkpoints. Code and docs in that folder stay tracked as normal.
+experiments/epitope_prediction/data/*cache*.json
+experiments/epitope_prediction/**/*.pt
+experiments/epitope_prediction/**/checkpoints/
+
+# Downstream BoltzGen campaign outputs (huge — full design/inverse-folding/folding
+# artifacts per target, reproducible via `downstream_eval.py <pdb_id> --launch`).
+# Results are summarized in PLAN.md sec 10 instead of keeping the raw run data.
+experiments/epitope_prediction/eval/.downstream_runs/
+
+# Local antibody-design databases (large, 100% reproducible via databases/src/) — all
+# the fetch code lives in databases/src/ (tracked in full, so the database can be
+# recreated on another machine from a clone alone) and every per-source data folder is
+# ignored except its provenance README.md.
+#
+# Gotcha (hit and verified twice while writing this, so spelling it out): git will not
+# apply a negation to something nested inside an already-excluded directory — it prunes
+# the whole directory from traversal first. `databases/*` excludes `databases/sabdab`
+# as a directory entry; `!databases/sabdab/README.md` alone does nothing, because
+# `databases/sabdab` itself is still excluded and never gets descended into. Each
+# excluded directory that needs *any* exception inside it must first be re-included as
+# a directory (`!databases/sabdab/`) before a more specific `databases/sabdab/*` +
+# `!databases/sabdab/README.md` pair can take effect on its contents.
+databases/*
+!databases/src/
+!databases/README.md
+!databases/splits/
+!databases/sabdab/
+!databases/aacdb/
+!databases/ab_bind/
+!databases/andd/
+!databases/abdesign_db/
+!databases/asd/
+
+databases/sabdab/*
+!databases/sabdab/README.md
+
+databases/aacdb/*
+!databases/aacdb/README.md
+
+databases/ab_bind/*
+!databases/ab_bind/README.md
+
+databases/andd/*
+!databases/andd/README.md
+
+databases/abdesign_db/*
+!databases/abdesign_db/README.md
+
+databases/asd/*
+!databases/asd/README.md
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor cruft
+.DS_Store
+
+# CHRNA2 campaign — excluded by request. 3.9GB of BoltzGen run outputs (design,
+# inverse-folding, folding artifacts for 3,000 designs) plus its own planning docs.
+# Same class of thing as .downstream_runs/ above: reproducible campaign output, too
+# large to track. If a future campaign under experiments/actual_campaigns/ should be
+# tracked, add its docs explicitly and keep its run1/ ignored.
+experiments/actual_campaigns/chrna2/
+
+# Backup copy of the v1 epitope-model checkpoints, kept on disk for comparison against
+# the v2 retrain. Ignored for the same reason as checkpoints/ above (trained artifacts,
+# reproducible via model/gnn.py) — and because the **/*.pt rule would otherwise let only
+# its baseline.pkl through, committing an incomplete set.
+experiments/epitope_prediction/model/checkpoints_baseline_v1/
+
+# Scoring-calibration cofold outputs (one predicted complex per benchmark entry —
+# large and reproducible via experiments/scoring_calibration/score_sets.py). The
+# labelled manifests under sets/ stay tracked: they're small and decision-bearing,
+# same split as databases/ and epitope_prediction/.
+experiments/scoring_calibration/.scores/
+
+# Boltz-2 stdout from the calibration run — noisy per-entry progress, megabytes,
+# and reproducible. results/scores.tsv (the actual data) stays tracked.
+experiments/scoring_calibration/results/*.log
+experiments/scoring_calibration/results/rosetta_run.log
+experiments/scoring_calibration/results/esmif_run.log
+weights/esm/
+experiments/scoring_calibration/results/asd_run.log

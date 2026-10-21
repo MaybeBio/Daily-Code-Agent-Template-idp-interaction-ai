@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.log
+*.dcd
+*.xtc
+*.trr
+*.chk
+*.h5
+*.weights.h5
+checkpoints*/
+models*/
+.DS_Store
+.idea/
+.vscode/
+output/
+outputs/
+figures_generated/

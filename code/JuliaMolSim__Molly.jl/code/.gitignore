@@ -1,0 +1,10 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+docs/build
+*Manifest.toml
+benchmark/tune.json
+benchmark/results
+.vscode/settings.json
+.agents/
+.codex/

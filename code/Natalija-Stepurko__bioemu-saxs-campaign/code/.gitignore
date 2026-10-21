@@ -1,0 +1,23 @@
+__pycache__/
+*.py[oc]
+.venv/
+.ruff_cache/
+.pytest_cache/
+
+# Downloaded inputs: experimental SAXS (SASBDB via PeptoneBench, CC-BY 4.0) and the public
+# BioEmu ensembles and back-calculated curves (Zenodo 17306061). Rebuilt by `bsc fetch`.
+data/
+
+# Large derived files; everything else under results/ is small and tracked.
+results/**/*.xtc
+results/**/*.npy
+results/**/*.npz
+
+# DENSS reconstructions of the worked examples (results/denss_stats.json keeps the fit statistics)
+results/denss/
+
+# Coverage analysis: downloads and intermediate tables (analysis/coverage/README.md)
+analysis/coverage/work/
+
+# Simulation analysis: downloads, tools, trajectories and computed curves (analysis/simulations/README.md)
+analysis/simulations/work/

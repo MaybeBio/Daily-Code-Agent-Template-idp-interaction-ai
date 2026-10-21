@@ -1,0 +1,14 @@
+# Source:  PLUMED Masterclass 21.4 — Metadynamics
+# Author:  Max Bonomi (2021)
+#          https://github.com/plumed/masterclass-21-4
+# Copied from the masterclass solution files for reference. Adapt CV definitions for your system.
+# Activate MOLINFO functionalities
+MOLINFO STRUCTURE=../data/diala/dialaA.pdb 
+# Compute the backbone dihedral angle phi, defined by atoms C-N-CA-C
+# you should use MOLINFO shortcuts
+phi: TORSION ATOMS=@phi-2
+# Compute the backbone dihedral angle psi, defined by atoms N-CA-C-N
+# here also you should to use MOLINFO shortcuts
+psi: TORSION ATOMS=@psi-2
+# Print the two collective variables on COLVAR file every step
+PRINT ARG=phi,psi FILE=COLVAR STRIDE=1

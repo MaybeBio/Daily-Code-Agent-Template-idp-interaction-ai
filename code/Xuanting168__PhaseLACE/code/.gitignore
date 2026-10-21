@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+cache/
+embeddings/
+runs/
+*.egg-info/
+.venv/

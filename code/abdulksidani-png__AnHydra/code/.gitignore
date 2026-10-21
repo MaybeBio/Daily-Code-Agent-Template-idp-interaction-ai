@@ -1,0 +1,36 @@
+# Secrets
+.env
+
+# Data + model artifacts (see the staged pipeline in README.md)
+data/*.csv
+data/*.npy
+data/*.npz
+data/*.joblib
+data/*.fasta
+data/*.clstr
+data/*.png
+data/*.json
+*.pt
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.tmp/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local frontend build artifacts
+/frontend/node_modules/
+/frontend/dist/
+
+# Local domain registration screenshot
+/deploy/domain-claim.png

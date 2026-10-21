@@ -1,0 +1,12 @@
+{
+  "project": "ConformEval",
+  "model_id": "synthetic-external-score-example",
+  "model_revision": "software-example-v1",
+  "prediction_method": "predefined synthetic scores for interface testing",
+  "training_protocol": "nested_grouped_oof",
+  "candidate_layers": [
+    1
+  ],
+  "pooling": "mean",
+  "scope": "software_example"
+}

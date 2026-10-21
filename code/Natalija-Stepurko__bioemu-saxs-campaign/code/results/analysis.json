@@ -1,0 +1,1505 @@
+{
+ "n_entries": 439,
+ "n_clean": 402,
+ "n_flag_aggregation": 1,
+ "n_flag_negative": 12,
+ "n_flag_bad_errors": 1,
+ "n_flag_oligomer": 18,
+ "oligomer_median_chi2_raw": 9.84141576039694,
+ "n_guinier_invalid": 7,
+ "class_counts": {
+  "folded": 268,
+  "partly disordered": 122,
+  "disordered": 49
+ },
+ "bioemu": {
+  "n_scored": 435,
+  "n_conformers_median": 100.0,
+  "chi2_raw_median": 3.319070660973848,
+  "chi2_raw_q25": 1.4233736749815833,
+  "chi2_raw_q75": 10.913767448686013,
+  "share_raw_fit_chi2_2": 0.3659147869674185,
+  "share_raw_fit_chi2_1": 0.020050125313283207,
+  "chi2_best_median": 1.073163064990193,
+  "phi_at_chi2_1_median": 0.2610180936296029,
+  "resolvability_counts": {
+   "raw fit": 146,
+   "strongly reweightable": 106,
+   "modestly reweightable": 77,
+   "target fit not reached": 70
+  },
+  "rg_ratio_median_by_class": {
+   "disordered": 1.2094505920036063,
+   "folded": 0.9845179076097466,
+   "partly disordered": 0.9787541110288913
+  }
+ },
+ "kinds": [
+  "raw fit",
+  "modestly reweightable",
+  "strongly reweightable",
+  "target fit not reached"
+ ],
+ "examples": {
+  "folded": "SASDH84",
+  "partly disordered": "SASDM65",
+  "disordered": "SASDLK9"
+ },
+ "representative_path": "SASDBT2",
+ "expectations": {
+  "E1": {
+   "statement": "raw chi2 worse for disordered than folded",
+   "median_folded": 2.339921817112088,
+   "median_disordered": 8.888180348544271,
+   "n_folded": 246,
+   "n_disordered": 41,
+   "p_one_sided": 1.2738901542179425e-06,
+   "met": true
+  },
+  "E2": {
+   "statement": "among folded proteins raw chi2 rises with length",
+   "spearman_rho": 0.08950339129755587,
+   "p": 0.16167322564557685,
+   "n": 246,
+   "share_fit_le_100": 0.6666666666666666,
+   "n_le_100": 15,
+   "share_fit_gt_100": 0.45021645021645024,
+   "n_gt_100": 231,
+   "median_chi2_le_100": 1.3716717609564215,
+   "median_chi2_gt_100": 2.3812323339304817,
+   "met": false
+  },
+  "E3": {
+   "statement": "most entries reach chi2 ~1 with phi above 0.3; a minority need phi below 0.1",
+   "share_reaching_chi2_1": 0.2731829573934837,
+   "share_phi_above_0.3": 0.12030075187969924,
+   "share_phi_below_0.1": 0.040100250626566414,
+   "met": false
+  },
+  "E4": {
+   "statement": "ensemble Rg below experimental Rg for disordered proteins",
+   "median_rg_ratio_disordered": 1.2094505920036063,
+   "n": 41,
+   "share_below_1": 0.24390243902439024,
+   "p_one_sided": 0.9999894016555118,
+   "p_two_sided": 2.2792579329689033e-05,
+   "ci95_median_rg_ratio": [
+    1.121022086515349,
+    1.2847829410451723
+   ],
+   "met": false
+  }
+ },
+ "rg_ratio_disordered_by_model": {
+  "alphafold": 1.0065702505096092,
+  "bioemu": 1.2094505920036063,
+  "boltz2": 0.5159876612875016,
+  "esmfold": 0.8822461736226705,
+  "idpfold": 0.999445379049415,
+  "idpsam": 0.39656831464620623,
+  "peptron": 1.0106790997597472
+ },
+ "model_comparison": [
+  {
+   "model": "alphafold",
+   "n": 399,
+   "median_log10_chi2_ratio_vs_bioemu": 0.05079786522895133,
+   "ci95_median_log10_chi2_ratio": [
+    0.02825452392029031,
+    0.07383474723890981
+   ],
+   "share_better_than_bioemu": 0.3433583959899749,
+   "ci95_share_better": [
+    0.2982456140350877,
+    0.39097744360902253
+   ],
+   "p_two_sided": 1.0414116743402832e-11,
+   "median_chi2_raw": 4.560997640025686,
+   "bioemu_median_chi2_raw_same_entries": 3.319070660973848,
+   "median_nrmsd_raw": 0.0369126742549428,
+   "bioemu_median_nrmsd_raw_same_entries": 0.0307532308725144,
+   "share_better_nrmsd": 0.3333333333333333
+  },
+  {
+   "model": "boltz2",
+   "n": 399,
+   "median_log10_chi2_ratio_vs_bioemu": 0.13858543640652377,
+   "ci95_median_log10_chi2_ratio": [
+    0.10473451756873298,
+    0.20298554339838237
+   ],
+   "share_better_than_bioemu": 0.21303258145363407,
+   "ci95_share_better": [
+    0.17293233082706766,
+    0.2531328320802005
+   ],
+   "p_two_sided": 1.1979484502497524e-32,
+   "median_chi2_raw": 6.782541789889076,
+   "bioemu_median_chi2_raw_same_entries": 3.319070660973848,
+   "median_nrmsd_raw": 0.0409619635408281,
+   "bioemu_median_nrmsd_raw_same_entries": 0.0307532308725144,
+   "share_better_nrmsd": 0.2506265664160401
+  },
+  {
+   "model": "esmfold",
+   "n": 399,
+   "median_log10_chi2_ratio_vs_bioemu": 0.08940073745544913,
+   "ci95_median_log10_chi2_ratio": [
+    0.06663796794274207,
+    0.12255926171987014
+   ],
+   "share_better_than_bioemu": 0.2882205513784461,
+   "ci95_share_better": [
+    0.24555137844611527,
+    0.3333333333333333
+   ],
+   "p_two_sided": 2.861846095165843e-20,
+   "median_chi2_raw": 4.963251529951402,
+   "bioemu_median_chi2_raw_same_entries": 3.319070660973848,
+   "median_nrmsd_raw": 0.0384690586181326,
+   "bioemu_median_nrmsd_raw_same_entries": 0.0307532308725144,
+   "share_better_nrmsd": 0.2982456140350877
+  },
+  {
+   "model": "idpfold",
+   "n": 236,
+   "median_log10_chi2_ratio_vs_bioemu": 0.5423679009632512,
+   "ci95_median_log10_chi2_ratio": [
+    0.42036711446475894,
+    0.7548132241768576
+   ],
+   "share_better_than_bioemu": 0.24152542372881355,
+   "ci95_share_better": [
+    0.1906779661016949,
+    0.2966101694915254
+   ],
+   "p_two_sided": 1.6574415371111358e-21,
+   "median_chi2_raw": 18.286033317849608,
+   "bioemu_median_chi2_raw_same_entries": 3.229570140085805,
+   "median_nrmsd_raw": 0.0531325800038195,
+   "bioemu_median_nrmsd_raw_same_entries": 0.031210786720218146,
+   "share_better_nrmsd": 0.3177966101694915
+  },
+  {
+   "model": "idpsam",
+   "n": 374,
+   "median_log10_chi2_ratio_vs_bioemu": 1.8459328190439332,
+   "ci95_median_log10_chi2_ratio": [
+    1.736104081079965,
+    1.9260145818210523
+   ],
+   "share_better_than_bioemu": 0.0106951871657754,
+   "ci95_share_better": [
+    0.00267379679144385,
+    0.0213903743315508
+   ],
+   "p_two_sided": 5.506513096420386e-63,
+   "median_chi2_raw": 310.46775596064555,
+   "bioemu_median_chi2_raw_same_entries": 3.3182336143238524,
+   "median_nrmsd_raw": 0.16870501109516775,
+   "bioemu_median_nrmsd_raw_same_entries": 0.03068875572016585,
+   "share_better_nrmsd": 0.013368983957219251
+  },
+  {
+   "model": "peptron",
+   "n": 399,
+   "median_log10_chi2_ratio_vs_bioemu": 0.021955610222941457,
+   "ci95_median_log10_chi2_ratio": [
+    0.006922428037100262,
+    0.036977999294534325
+   ],
+   "share_better_than_bioemu": 0.40350877192982454,
+   "ci95_share_better": [
+    0.3583959899749373,
+    0.45112781954887216
+   ],
+   "p_two_sided": 8.281467737357984e-05,
+   "median_chi2_raw": 4.193234922722412,
+   "bioemu_median_chi2_raw_same_entries": 3.319070660973848,
+   "median_nrmsd_raw": 0.0344911606319646,
+   "bioemu_median_nrmsd_raw_same_entries": 0.0307532308725144,
+   "share_better_nrmsd": 0.42857142857142855
+  }
+ ],
+ "by_class": [
+  {
+   "model": "alphafold",
+   "disorder_class": "folded",
+   "n": 249,
+   "chi2_raw_median": 2.8133782259,
+   "chi2_raw_q25": 1.3704081649,
+   "chi2_raw_q75": 7.8513452367,
+   "share_raw_fit": 0.421686747,
+   "chi2_best_median": 2.8133782259,
+   "phi_at_chi2_1_median": 1.0,
+   "share_not_fit": 0.578313253,
+   "rg_ratio_median": 0.9858027132,
+   "nrmsd_raw_median": 0.033334535,
+   "nrmsd_best_median": 0.033334535
+  },
+  {
+   "model": "alphafold",
+   "disorder_class": "partly disordered",
+   "n": 112,
+   "chi2_raw_median": 7.193670565,
+   "chi2_raw_q25": 2.7417670841,
+   "chi2_raw_q75": 24.1127173082,
+   "share_raw_fit": 0.1517857143,
+   "chi2_best_median": 7.193670565,
+   "phi_at_chi2_1_median": 1.0,
+   "share_not_fit": 0.8482142857,
+   "rg_ratio_median": 0.970532208,
+   "nrmsd_raw_median": 0.0405522489,
+   "nrmsd_best_median": 0.0405522489
+  },
+  {
+   "model": "alphafold",
+   "disorder_class": "disordered",
+   "n": 41,
+   "chi2_raw_median": 36.1722207621,
+   "chi2_raw_q25": 6.3757956975,
+   "chi2_raw_q75": 84.5233167847,
+   "share_raw_fit": 0.0731707317,
+   "chi2_best_median": 36.1722207621,
+   "phi_at_chi2_1_median": null,
+   "share_not_fit": 0.9268292683,
+   "rg_ratio_median": 1.0065702505,
+   "nrmsd_raw_median": 0.0649633398,
+   "nrmsd_best_median": 0.0649633398
+  },
+  {
+   "model": "bioemu",
+   "disorder_class": "folded",
+   "n": 246,
+   "chi2_raw_median": 2.3399218171,
+   "chi2_raw_q25": 1.302861431,
+   "chi2_raw_q75": 7.7128620983,
+   "share_raw_fit": 0.4634146341,
+   "chi2_best_median": 1.1202718974,
+   "phi_at_chi2_1_median": 0.269990709,
+   "share_not_fit": 0.1910569106,
+   "rg_ratio_median": 0.9845179076,
+   "nrmsd_raw_median": 0.0299567017,
+   "nrmsd_best_median": 0.02570405
+  },
+  {
+   "model": "bioemu",
+   "disorder_class": "partly disordered",
+   "n": 112,
+   "chi2_raw_median": 4.3398048191,
+   "chi2_raw_q25": 2.0382465282,
+   "chi2_raw_q75": 13.7416102864,
+   "share_raw_fit": 0.2410714286,
+   "chi2_best_median": 1.0413566817,
+   "phi_at_chi2_1_median": 0.2526286696,
+   "share_not_fit": 0.1607142857,
+   "rg_ratio_median": 0.978754111,
+   "nrmsd_raw_median": 0.0341266204,
+   "nrmsd_best_median": 0.0242772881
+  },
+  {
+   "model": "bioemu",
+   "disorder_class": "disordered",
+   "n": 41,
+   "chi2_raw_median": 8.8881803485,
+   "chi2_raw_q25": 4.5501203132,
+   "chi2_raw_q75": 25.1041228282,
+   "share_raw_fit": 0.1219512195,
+   "chi2_best_median": 1.017866332,
+   "phi_at_chi2_1_median": 0.2962695011,
+   "share_not_fit": 0.1219512195,
+   "rg_ratio_median": 1.209450592,
+   "nrmsd_raw_median": 0.0307739052,
+   "nrmsd_best_median": 0.0178981381
+  },
+  {
+   "model": "boltz2",
+   "disorder_class": "folded",
+   "n": 249,
+   "chi2_raw_median": 3.2325249464,
+   "chi2_raw_q25": 1.3976500342,
+   "chi2_raw_q75": 11.5313752303,
+   "share_raw_fit": 0.3815261044,
+   "chi2_best_median": 1.4687205421,
+   "phi_at_chi2_1_median": 0.3637308064,
+   "share_not_fit": 0.3855421687,
+   "rg_ratio_median": 0.9583285264,
+   "nrmsd_raw_median": 0.0338281702,
+   "nrmsd_best_median": 0.0301822341
+  },
+  {
+   "model": "boltz2",
+   "disorder_class": "partly disordered",
+   "n": 112,
+   "chi2_raw_median": 20.091042388,
+   "chi2_raw_q25": 3.9670611786,
+   "chi2_raw_q75": 50.5799754565,
+   "share_raw_fit": 0.1071428571,
+   "chi2_best_median": 5.0421567689,
+   "phi_at_chi2_1_median": 0.1144238081,
+   "share_not_fit": 0.6964285714,
+   "rg_ratio_median": 0.834737765,
+   "nrmsd_raw_median": 0.051225207,
+   "nrmsd_best_median": 0.0366937455
+  },
+  {
+   "model": "boltz2",
+   "disorder_class": "disordered",
+   "n": 41,
+   "chi2_raw_median": 153.057840856,
+   "chi2_raw_q25": 32.7952033964,
+   "chi2_raw_q75": 239.4251480859,
+   "share_raw_fit": 0.0,
+   "chi2_best_median": 65.7359842503,
+   "phi_at_chi2_1_median": null,
+   "share_not_fit": 0.9512195122,
+   "rg_ratio_median": 0.5159876613,
+   "nrmsd_raw_median": 0.1041390251,
+   "nrmsd_best_median": 0.0858365953
+  },
+  {
+   "model": "esmfold",
+   "disorder_class": "folded",
+   "n": 249,
+   "chi2_raw_median": 3.5602789382,
+   "chi2_raw_q25": 1.3790481309,
+   "chi2_raw_q75": 9.8476095668,
+   "share_raw_fit": 0.3734939759,
+   "chi2_best_median": 3.5602789382,
+   "phi_at_chi2_1_median": 1.0,
+   "share_not_fit": 0.6265060241,
+   "rg_ratio_median": 0.9731480576,
+   "nrmsd_raw_median": 0.0349329979,
+   "nrmsd_best_median": 0.0349329979
+  },
+  {
+   "model": "esmfold",
+   "disorder_class": "partly disordered",
+   "n": 112,
+   "chi2_raw_median": 8.7370698673,
+   "chi2_raw_q25": 3.2205619198,
+   "chi2_raw_q75": 27.0789112891,
+   "share_raw_fit": 0.0982142857,
+   "chi2_best_median": 8.7370698673,
+   "phi_at_chi2_1_median": 1.0,
+   "share_not_fit": 0.9017857143,
+   "rg_ratio_median": 0.9140742021,
+   "nrmsd_raw_median": 0.0452640012,
+   "nrmsd_best_median": 0.0452640012
+  },
+  {
+   "model": "esmfold",
+   "disorder_class": "disordered",
+   "n": 41,
+   "chi2_raw_median": 28.3939609147,
+   "chi2_raw_q25": 5.4839092229,
+   "chi2_raw_q75": 68.8225985982,
+   "share_raw_fit": 0.0243902439,
+   "chi2_best_median": 28.3939609147,
+   "phi_at_chi2_1_median": null,
+   "share_not_fit": 0.9756097561,
+   "rg_ratio_median": 0.8822461736,
+   "nrmsd_raw_median": 0.0667608995,
+   "nrmsd_best_median": 0.0667608995
+  },
+  {
+   "model": "idpfold",
+   "disorder_class": "folded",
+   "n": 137,
+   "chi2_raw_median": 36.1467166758,
+   "chi2_raw_q25": 8.7133662161,
+   "chi2_raw_q75": 116.7164577115,
+   "share_raw_fit": 0.0656934307,
+   "chi2_best_median": 1.7874132413,
+   "phi_at_chi2_1_median": 0.1152309493,
+   "share_not_fit": 0.4598540146,
+   "rg_ratio_median": 1.180106905,
+   "nrmsd_raw_median": 0.0633853597,
+   "nrmsd_best_median": 0.0317921991
+  },
+  {
+   "model": "idpfold",
+   "disorder_class": "partly disordered",
+   "n": 63,
+   "chi2_raw_median": 14.2726315191,
+   "chi2_raw_q25": 3.2773851248,
+   "chi2_raw_q75": 62.2911032373,
+   "share_raw_fit": 0.1428571429,
+   "chi2_best_median": 1.2627233551,
+   "phi_at_chi2_1_median": 0.2771085895,
+   "share_not_fit": 0.3492063492,
+   "rg_ratio_median": 1.0620390774,
+   "nrmsd_raw_median": 0.0505758805,
+   "nrmsd_best_median": 0.0280960734
+  },
+  {
+   "model": "idpfold",
+   "disorder_class": "disordered",
+   "n": 37,
+   "chi2_raw_median": 6.1459872989,
+   "chi2_raw_q25": 2.488410544,
+   "chi2_raw_q75": 22.8090780673,
+   "share_raw_fit": 0.1621621622,
+   "chi2_best_median": 1.050209944,
+   "phi_at_chi2_1_median": 0.3248534986,
+   "share_not_fit": 0.0540540541,
+   "rg_ratio_median": 0.999445379,
+   "nrmsd_raw_median": 0.028710234,
+   "nrmsd_best_median": 0.0179734501
+  },
+  {
+   "model": "idpsam",
+   "disorder_class": "folded",
+   "n": 234,
+   "chi2_raw_median": 396.761493028,
+   "chi2_raw_q25": 75.8555658859,
+   "chi2_raw_q75": 1689.658692709,
+   "share_raw_fit": 0.0213675214,
+   "chi2_best_median": 256.8609026588,
+   "phi_at_chi2_1_median": 0.1042149915,
+   "share_not_fit": 0.9444444444,
+   "rg_ratio_median": 0.4841891425,
+   "nrmsd_raw_median": 0.1676700531,
+   "nrmsd_best_median": 0.1552285794
+  },
+  {
+   "model": "idpsam",
+   "disorder_class": "partly disordered",
+   "n": 103,
+   "chi2_raw_median": 292.4345319925,
+   "chi2_raw_q25": 93.6416051474,
+   "chi2_raw_q75": 1035.4871130539,
+   "share_raw_fit": 0.0097087379,
+   "chi2_best_median": 215.0933168637,
+   "phi_at_chi2_1_median": 0.2181379004,
+   "share_not_fit": 0.9417475728,
+   "rg_ratio_median": 0.4456051427,
+   "nrmsd_raw_median": 0.1658639354,
+   "nrmsd_best_median": 0.1578563143
+  },
+  {
+   "model": "idpsam",
+   "disorder_class": "disordered",
+   "n": 40,
+   "chi2_raw_median": 192.0505523899,
+   "chi2_raw_q25": 83.0797220575,
+   "chi2_raw_q75": 503.4012839445,
+   "share_raw_fit": 0.0,
+   "chi2_best_median": 132.5051874976,
+   "phi_at_chi2_1_median": null,
+   "share_not_fit": 0.95,
+   "rg_ratio_median": 0.3965683146,
+   "nrmsd_raw_median": 0.1803049671,
+   "nrmsd_best_median": 0.1318631061
+  },
+  {
+   "model": "peptron",
+   "disorder_class": "folded",
+   "n": 249,
+   "chi2_raw_median": 2.5544736726,
+   "chi2_raw_q25": 1.3024489469,
+   "chi2_raw_q75": 8.5684050528,
+   "share_raw_fit": 0.437751004,
+   "chi2_best_median": 1.2195152326,
+   "phi_at_chi2_1_median": 0.3593848128,
+   "share_not_fit": 0.297188755,
+   "rg_ratio_median": 0.9725771743,
+   "nrmsd_raw_median": 0.0322686888,
+   "nrmsd_best_median": 0.0273645247
+  },
+  {
+   "model": "peptron",
+   "disorder_class": "partly disordered",
+   "n": 112,
+   "chi2_raw_median": 5.1209186593,
+   "chi2_raw_q25": 2.3072001217,
+   "chi2_raw_q75": 21.7653713065,
+   "share_raw_fit": 0.2142857143,
+   "chi2_best_median": 1.1088101985,
+   "phi_at_chi2_1_median": 0.3801970349,
+   "share_not_fit": 0.2589285714,
+   "rg_ratio_median": 0.925734504,
+   "nrmsd_raw_median": 0.0365638009,
+   "nrmsd_best_median": 0.0255487972
+  },
+  {
+   "model": "peptron",
+   "disorder_class": "disordered",
+   "n": 41,
+   "chi2_raw_median": 10.286226422,
+   "chi2_raw_q25": 5.1707496516,
+   "chi2_raw_q75": 23.7600589034,
+   "share_raw_fit": 0.0975609756,
+   "chi2_best_median": 1.1096154604,
+   "phi_at_chi2_1_median": 0.1415892834,
+   "share_not_fit": 0.2682926829,
+   "rg_ratio_median": 1.0106790998,
+   "nrmsd_raw_median": 0.0437050728,
+   "nrmsd_best_median": 0.0205636944
+  }
+ ],
+ "top_candidates": [
+  {
+   "label": "SASDAG8",
+   "length": 189,
+   "disorder_class": "folded",
+   "chi2_raw": 156.185879622,
+   "chi2_best": 1.9124376418,
+   "phi_at_chi2_2": 0.034641612,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 22.9935482854,
+   "rg_model": 19.0029448415,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.4971202891,
+   "sasbdb_title": "Flexible Structure of Peptide-Bound Filamin A Mechanosensor Domain Pair 20-21.",
+   "priority": 2.1936417678
+  },
+  {
+   "label": "SASDJ84",
+   "length": 215,
+   "disorder_class": "folded",
+   "chi2_raw": 112.168196479,
+   "chi2_best": 1.2350694275,
+   "phi_at_chi2_2": 0.091175195,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 26.942580073,
+   "rg_model": 22.1661598788,
+   "rg_direction": "model too compact",
+   "mw_ratio": 0.9189889371,
+   "sasbdb_title": "The extracellular juncture domains in the intimin passenger adopt a constitutively extended conformation inducing restraints to its sphere of action.",
+   "priority": 2.049869737
+  },
+  {
+   "label": "SASDCP8",
+   "length": 211,
+   "disorder_class": "folded",
+   "chi2_raw": 96.2000962408,
+   "chi2_best": 1.6302907872,
+   "phi_at_chi2_2": 0.1227381114,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 22.9309132198,
+   "rg_model": 19.8997982704,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.0212531287,
+   "sasbdb_title": "The SAXS Analysis of the human GTPase Rab1a",
+   "priority": 1.9831755065
+  },
+  {
+   "label": "SASDPA8",
+   "length": 200,
+   "disorder_class": "folded",
+   "chi2_raw": 77.1142387141,
+   "chi2_best": 1.3103974609,
+   "phi_at_chi2_2": 0.1417705773,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 23.7685653573,
+   "rg_model": 20.00397561,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.074249691,
+   "sasbdb_title": "Structural plasticity of NFU1 upon interaction with binding partners: insights into the mitochondrial [4Fe-4S] cluster pathway",
+   "priority": 1.8871345755
+  },
+  {
+   "label": "SASDFK8",
+   "length": 114,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 62.0586381968,
+   "chi2_best": 1.0060268652,
+   "phi_at_chi2_2": 0.329952843,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 29.5951698135,
+   "rg_model": 32.3576632188,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.1675339776,
+   "sasbdb_title": "Defects in t<sup>6</sup>A tRNA modification due to GON7 and YRDC mutations lead to Galloway-Mowat syndrome.",
+   "priority": 1.7928022413
+  },
+  {
+   "label": "SASDBW2",
+   "length": 210,
+   "disorder_class": "folded",
+   "chi2_raw": 45.2480010195,
+   "chi2_best": 1.1021306138,
+   "phi_at_chi2_2": 0.080609149,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 22.0816538132,
+   "rg_model": 20.4672913321,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.0722972223,
+   "sasbdb_title": "Hybrid Structural Analysis of the Arp2/3 Regulator Arpin Identifies Its Acidic Tail as a Primary Binding Epitope.",
+   "priority": 1.6555993976
+  },
+  {
+   "label": "SASDCD3",
+   "length": 275,
+   "disorder_class": "folded",
+   "chi2_raw": 37.958133243,
+   "chi2_best": 0.9610820638,
+   "phi_at_chi2_2": 0.2986114624,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 26.9814609698,
+   "rg_model": 25.6825250299,
+   "rg_direction": "Rg agrees",
+   "mw_ratio": 0.9796023208,
+   "sasbdb_title": "Segmental, Domain-Selective Perdeuteration and Small-Angle Neutron Scattering for Structural Analysis of Multi-Domain Proteins.",
+   "priority": 1.579304846
+  },
+  {
+   "label": "SASDDE3",
+   "length": 122,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 37.3166170787,
+   "chi2_best": 1.1845022511,
+   "phi_at_chi2_2": 0.2660893891,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 20.0502884375,
+   "rg_model": 17.2984628061,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.0982172274,
+   "sasbdb_title": "Structure and stability of the Human respiratory syncytial virus M<sub>2-1</sub> RNA-binding core domain reveals a compact and cooperative folding unit.",
+   "priority": 1.5719022661
+  },
+  {
+   "label": "SASDEC9",
+   "length": 257,
+   "disorder_class": "folded",
+   "chi2_raw": 29.2386098932,
+   "chi2_best": 1.3078382847,
+   "phi_at_chi2_2": 0.0435763642,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 21.9700558544,
+   "rg_model": 24.2523137782,
+   "rg_direction": "model too extended",
+   "mw_ratio": 0.9531288668,
+   "sasbdb_title": "Structural insights into the mechanism of c-di-GMP-bound YcgR regulating flagellar motility in <i>Escherichia coli</i>.",
+   "priority": 1.4659567209
+  },
+  {
+   "label": "SASDC35",
+   "length": 311,
+   "disorder_class": "folded",
+   "chi2_raw": 24.2001816666,
+   "chi2_best": 0.443204182,
+   "phi_at_chi2_2": 0.1356694957,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 29.6269388698,
+   "rg_model": 35.9823926996,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.00059714,
+   "sasbdb_title": "Ca2+ - Induced Structural Change of Multi-Domain Collagen Binding Segments of Collagenases ColG and ColH from Hathewaya histolytica",
+   "priority": 1.3838186262
+  },
+  {
+   "label": "SASDE79",
+   "length": 314,
+   "disorder_class": "folded",
+   "chi2_raw": 23.5679903776,
+   "chi2_best": 1.1429990008,
+   "phi_at_chi2_2": 0.3226664316,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 31.5003431101,
+   "rg_model": 35.1807570626,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.5178160198,
+   "sasbdb_title": "Functional Relevance of Interleukin-1 Receptor Inter-domain Flexibility for Cytokine Binding and Signaling.",
+   "priority": 1.3723225522
+  },
+  {
+   "label": "SASDDL7",
+   "length": 128,
+   "disorder_class": "folded",
+   "chi2_raw": 22.9440367915,
+   "chi2_best": 1.7528293325,
+   "phi_at_chi2_2": 0.0214134187,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 17.2626062061,
+   "rg_model": 16.0228302959,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.0880009652,
+   "sasbdb_title": "Biophysical insights from a single chain camelid antibody directed against the Disrupted-in-Schizophrenia 1 protein.",
+   "priority": 1.3606698304
+  },
+  {
+   "label": "SASDJK6",
+   "length": 209,
+   "disorder_class": "disordered",
+   "chi2_raw": 162.3814794768,
+   "chi2_best": 1.6008209867,
+   "phi_at_chi2_2": 0.0429456209,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 38.2126804836,
+   "rg_model": 52.7067396299,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.5717487006,
+   "sasbdb_title": "Order from disorder in the sarcomere: FATZ forms a fuzzy but tight complex and phase-separated condensates with \u03b1-actinin.",
+   "priority": 1.3263218964
+  },
+  {
+   "label": "SASDJX3",
+   "length": 190,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 20.7058671015,
+   "chi2_best": 1.0225747473,
+   "phi_at_chi2_2": 0.3819309705,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 29.754457106,
+   "rg_model": 25.5337658066,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.413821697,
+   "sasbdb_title": "BonA from <i>Acinetobacter baumannii</i> Forms a Divisome-Localized Decamer That Supports Outer Envelope Function.",
+   "priority": 1.3160934222
+  },
+  {
+   "label": "SASDKU8",
+   "length": 103,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 19.9473577457,
+   "chi2_best": 1.1115914674,
+   "phi_at_chi2_2": 0.0468233256,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 29.6770992351,
+   "rg_model": 19.9684050479,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.0742590522,
+   "sasbdb_title": "An Integrative Structural Biology Analysis of Von Willebrand Factor Binding and Processing by ADAMTS-13 in Solution.",
+   "priority": 1.2998853766
+  },
+  {
+   "label": "SASDVL7",
+   "length": 114,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 19.5254712291,
+   "chi2_best": 1.2000248874,
+   "phi_at_chi2_2": 0.0774674194,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 19.7530902062,
+   "rg_model": 17.14402079,
+   "rg_direction": "model too compact",
+   "mw_ratio": 0.8725704367,
+   "sasbdb_title": "Dimerization of ADAR1 modulates site-specificity of RNA editing",
+   "priority": 1.290601524
+  },
+  {
+   "label": "SASDJX7",
+   "length": 302,
+   "disorder_class": "folded",
+   "chi2_raw": 19.4465068443,
+   "chi2_best": 1.0647435268,
+   "phi_at_chi2_2": 0.3657176024,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 26.1464513977,
+   "rg_model": 27.1715762627,
+   "rg_direction": "Rg agrees",
+   "mw_ratio": 0.9830439377,
+   "sasbdb_title": "A salivary factor binds a cuticular protein and modulates biting by inducing morphological changes in the mosquito labrum.",
+   "priority": 1.2888416008
+  },
+  {
+   "label": "SASDBX2",
+   "length": 388,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 336.0669401656,
+   "chi2_best": 1.491646079,
+   "phi_at_chi2_2": 0.1248867678,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 31.3072106272,
+   "rg_model": 28.5869693208,
+   "rg_direction": "model too compact",
+   "mw_ratio": 0.892646891,
+   "sasbdb_title": "Hybrid Structural Analysis of the Arp2/3 Regulator Arpin Identifies Its Acidic Tail as a Primary Binding Epitope.",
+   "priority": 1.2632128959
+  },
+  {
+   "label": "SASDDD9",
+   "length": 137,
+   "disorder_class": "folded",
+   "chi2_raw": 18.1125881587,
+   "chi2_best": 0.9919589487,
+   "phi_at_chi2_2": 0.2398747767,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 18.9559063985,
+   "rg_model": 21.2512812836,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.0000833672,
+   "sasbdb_title": "A Highly Conserved Yet Flexible Linker Is Part of a Polymorphic Protein-Binding Domain in Myosin-Binding Protein C.",
+   "priority": 1.2579805123
+  },
+  {
+   "label": "SASDTS5",
+   "length": 177,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 15.8472929335,
+   "chi2_best": 0.99864977,
+   "phi_at_chi2_2": 0.1208904902,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 22.1232231221,
+   "rg_model": 30.0789278316,
+   "rg_direction": "model too extended",
+   "mw_ratio": 0.9933998472,
+   "sasbdb_title": "The Chlamydia pneumoniae effector SemD exploits its host\u2019s endocytic machinery by structural and functional mimicry",
+   "priority": 1.1999550858
+  },
+  {
+   "label": "SASDDF6",
+   "length": 169,
+   "disorder_class": "disordered",
+   "chi2_raw": 69.4984922116,
+   "chi2_best": 0.8152747468,
+   "phi_at_chi2_2": 0.3625611337,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 33.0817807556,
+   "rg_model": 40.5034396838,
+   "rg_direction": "model too extended",
+   "mw_ratio": 1.1182355346,
+   "sasbdb_title": "Internal nanosecond dynamics in the intrinsically disordered myelin basic protein.",
+   "priority": 1.1051852295
+  },
+  {
+   "label": "SASDUA2",
+   "length": 165,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 12.6269456967,
+   "chi2_best": 1.0682894917,
+   "phi_at_chi2_2": 0.3171351648,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 21.5382231539,
+   "rg_model": 24.363902234,
+   "rg_direction": "model too extended",
+   "mw_ratio": 0.7577758629,
+   "sasbdb_title": "ZBP1 condensate formation synergizes Z-NAs recognition and signal transduction.",
+   "priority": 1.1012983127
+  },
+  {
+   "label": "SASDC26",
+   "length": 410,
+   "disorder_class": "folded",
+   "chi2_raw": 133.3085785661,
+   "chi2_best": 1.1245564524,
+   "phi_at_chi2_2": 0.0889808003,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 31.6052421343,
+   "rg_model": 27.504485108,
+   "rg_direction": "model too compact",
+   "mw_ratio": 0.8698716557,
+   "sasbdb_title": "Structural and functional dissection of the DH and PH domains of oncogenic Bcr-Abl tyrosine kinase.",
+   "priority": 1.0624290488
+  },
+  {
+   "label": "SASDR22",
+   "length": 156,
+   "disorder_class": "partly disordered",
+   "chi2_raw": 11.4900393647,
+   "chi2_best": 1.0029831334,
+   "phi_at_chi2_2": 0.2614739985,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 27.0646811384,
+   "rg_model": 22.797918045,
+   "rg_direction": "model too compact",
+   "mw_ratio": 1.1568287777,
+   "sasbdb_title": "Invariant BECN1 CXXC motifs bind Zn(2+) and regulate structure and function of the BECN1 intrinsically disordered region.",
+   "priority": 1.0603215166
+  },
+  {
+   "label": "SASDN68",
+   "length": 201,
+   "disorder_class": "folded",
+   "chi2_raw": 9.6461725497,
+   "chi2_best": 1.2006837217,
+   "phi_at_chi2_2": 0.321606762,
+   "resolvability": "strongly reweightable",
+   "rg_exp": 21.212890858,
+   "rg_model": 19.7868478278,
+   "rg_direction": "model too compact",
+   "mw_ratio": 0.9919059564,
+   "sasbdb_title": "Structure of the photoreceptor synaptic assembly of the extracellular matrix protein pikachurin with the orphan receptor GPR179",
+   "priority": 0.9843550263
+  }
+ ],
+ "thresholds": {
+  "raw_fit_chi2": 2.0,
+  "resolvability_phi": 0.5,
+  "chi2_target": 1.0,
+  "aggregation_upturn": 0.1,
+  "theta_grid": [
+   0.01,
+   0.01778279410038923,
+   0.03162277660168379,
+   0.056234132519034905,
+   0.1,
+   0.1778279410038923,
+   0.31622776601683794,
+   0.5623413251903491,
+   1.0,
+   1.7782794100389228,
+   3.1622776601683795,
+   5.62341325190349,
+   10.0,
+   17.78279410038923,
+   31.622776601683793,
+   56.23413251903491,
+   100.0,
+   177.82794100389228,
+   316.2277660168379,
+   562.341325190349,
+   1000.0,
+   1778.2794100389228,
+   3162.2776601683795,
+   5623.413251903491,
+   10000.0
+  ]
+ },
+ "rg_robustness": {
+  "n_boot": 2000,
+  "seed": 20261009,
+  "curve_rg_ratio_by_class": {
+   "folded": {
+    "n": 246,
+    "median": 0.9845179076097466,
+    "ci95": [
+     0.9757477676992208,
+     0.9899482766545858
+    ],
+    "share_above_1": 0.3170731707317073,
+    "p_two_sided_wilcoxon_log": 1.179863058971793e-06
+   },
+   "partly disordered": {
+    "n": 112,
+    "median": 0.9787541110288913,
+    "ci95": [
+     0.9644133981740022,
+     1.0392148905232161
+    ],
+    "share_above_1": 0.45535714285714285,
+    "p_two_sided_wilcoxon_log": 0.7450673258065789
+   },
+   "disordered": {
+    "n": 41,
+    "median": 1.2094505920036063,
+    "ci95": [
+     1.121022086515349,
+     1.2847829410451723
+    ],
+    "share_above_1": 0.7560975609756098,
+    "p_two_sided_wilcoxon_log": 2.2792579329689033e-05
+   }
+  },
+  "disordered_drop_5_most_extreme": {
+   "n": 36,
+   "median": 1.1853247745220394,
+   "ci95": [
+    1.0725453984919695,
+    1.2415807221947681
+   ],
+   "p_two_sided_wilcoxon_log": 0.0005845052655786276,
+   "dropped": [
+    "SASDBZ6",
+    "SASDJG6",
+    "SASDJJ6",
+    "SASDJT7",
+    "SASDRF8"
+   ]
+  },
+  "disordered_ratio_vs_length": {
+   "spearman_rho": 0.3456478291822384,
+   "p": 0.026862960421930506,
+   "n": 41
+  },
+  "near_duplicates": {
+   "threshold_jaccard_5mer": 0.5,
+   "n_pairs": 38,
+   "n_identical_pairs": 0,
+   "n_entries_in_clusters": 54,
+   "n_clusters_clean": 370,
+   "pairs": [
+    {
+     "a": "SASDA37",
+     "b": "SASDA47",
+     "jaccard": 0.891,
+     "containment": 0.981,
+     "identical": false
+    },
+    {
+     "a": "SASDA37",
+     "b": "SASDA57",
+     "jaccard": 0.891,
+     "containment": 0.981,
+     "identical": false
+    },
+    {
+     "a": "SASDA47",
+     "b": "SASDA57",
+     "jaccard": 1.0,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDAE6",
+     "b": "SASDAR3",
+     "jaccard": 0.704,
+     "containment": 0.985,
+     "identical": false
+    },
+    {
+     "a": "SASDAQ2",
+     "b": "SASDBN2",
+     "jaccard": 0.947,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDAQ2",
+     "b": "SASDBP2",
+     "jaccard": 0.947,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDAQ2",
+     "b": "SASDRK7",
+     "jaccard": 0.947,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDAQ2",
+     "b": "SASDRQ7",
+     "jaccard": 0.828,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDAY4",
+     "b": "SASDAZ4",
+     "jaccard": 0.649,
+     "containment": 0.983,
+     "identical": false
+    },
+    {
+     "a": "SASDB26",
+     "b": "SASDB76",
+     "jaccard": 0.61,
+     "containment": 0.968,
+     "identical": false
+    },
+    {
+     "a": "SASDB43",
+     "b": "SASDB53",
+     "jaccard": 0.681,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDBN2",
+     "b": "SASDBP2",
+     "jaccard": 1.0,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDBN2",
+     "b": "SASDRK7",
+     "jaccard": 0.9,
+     "containment": 0.947,
+     "identical": false
+    },
+    {
+     "a": "SASDBN2",
+     "b": "SASDRQ7",
+     "jaccard": 0.791,
+     "containment": 0.947,
+     "identical": false
+    },
+    {
+     "a": "SASDBP2",
+     "b": "SASDRK7",
+     "jaccard": 0.9,
+     "containment": 0.947,
+     "identical": false
+    },
+    {
+     "a": "SASDBP2",
+     "b": "SASDRQ7",
+     "jaccard": 0.791,
+     "containment": 0.947,
+     "identical": false
+    },
+    {
+     "a": "SASDBW2",
+     "b": "SASDBX2",
+     "jaccard": 0.541,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDC26",
+     "b": "SASDC36",
+     "jaccard": 0.53,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDC35",
+     "b": "SASDJZ6",
+     "jaccard": 0.592,
+     "containment": 0.918,
+     "identical": false
+    },
+    {
+     "a": "SASDCD3",
+     "b": "SASDJM5",
+     "jaccard": 0.661,
+     "containment": 0.948,
+     "identical": false
+    },
+    {
+     "a": "SASDET2",
+     "b": "SASDUL9",
+     "jaccard": 0.67,
+     "containment": 0.931,
+     "identical": false
+    },
+    {
+     "a": "SASDF53",
+     "b": "SASDRD9",
+     "jaccard": 0.519,
+     "containment": 0.907,
+     "identical": false
+    },
+    {
+     "a": "SASDH65",
+     "b": "SASDH95",
+     "jaccard": 0.672,
+     "containment": 0.984,
+     "identical": false
+    },
+    {
+     "a": "SASDJF6",
+     "b": "SASDJH6",
+     "jaccard": 0.519,
+     "containment": 0.872,
+     "identical": false
+    },
+    {
+     "a": "SASDJG6",
+     "b": "SASDJH6",
+     "jaccard": 0.766,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDJN5",
+     "b": "SASDJP5",
+     "jaccard": 0.736,
+     "containment": 0.997,
+     "identical": false
+    },
+    {
+     "a": "SASDLS4",
+     "b": "SASDLT4",
+     "jaccard": 0.502,
+     "containment": 0.883,
+     "identical": false
+    },
+    {
+     "a": "SASDM43",
+     "b": "SASDM53",
+     "jaccard": 0.523,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDM55",
+     "b": "SASDM65",
+     "jaccard": 0.59,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDNK8",
+     "b": "SASDNL8",
+     "jaccard": 0.513,
+     "containment": 0.7,
+     "identical": false
+    },
+    {
+     "a": "SASDPC7",
+     "b": "SASDPD7",
+     "jaccard": 0.679,
+     "containment": 0.923,
+     "identical": false
+    },
+    {
+     "a": "SASDQC9",
+     "b": "SASDQD9",
+     "jaccard": 0.713,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDQF8",
+     "b": "SASDQJ8",
+     "jaccard": 0.723,
+     "containment": 0.979,
+     "identical": false
+    },
+    {
+     "a": "SASDR33",
+     "b": "SASDSV9",
+     "jaccard": 0.528,
+     "containment": 0.993,
+     "identical": false
+    },
+    {
+     "a": "SASDRK7",
+     "b": "SASDRQ7",
+     "jaccard": 0.791,
+     "containment": 0.947,
+     "identical": false
+    },
+    {
+     "a": "SASDRW9",
+     "b": "SASDRX9",
+     "jaccard": 0.549,
+     "containment": 1.0,
+     "identical": false
+    },
+    {
+     "a": "SASDSP6",
+     "b": "SASDSS6",
+     "jaccard": 0.703,
+     "containment": 0.883,
+     "identical": false
+    },
+    {
+     "a": "SASDUW6",
+     "b": "SASDUX6",
+     "jaccard": 0.645,
+     "containment": 0.94,
+     "identical": false
+    }
+   ],
+   "collapsed_curve_rg_ratio_by_class": {
+    "folded": {
+     "n": 231,
+     "median": 0.984589793553064,
+     "ci95": [
+      0.9756678274312964,
+      0.9905913192278049
+     ],
+     "share_above_1": 0.3203463203463203,
+     "p_two_sided_wilcoxon_log": 6.239611195501911e-06
+    },
+    "partly disordered": {
+     "n": 102,
+     "median": 0.9769902743911476,
+     "ci95": [
+      0.9632702785204346,
+      1.0318491176593243
+     ],
+     "share_above_1": 0.43137254901960786,
+     "p_two_sided_wilcoxon_log": 0.9401279141089826
+    },
+    "disordered": {
+     "n": 37,
+     "median": 1.212834040055129,
+     "ci95": [
+      1.119388305001736,
+      1.3031454262056963
+     ],
+     "share_above_1": 0.7567567567567568,
+     "p_two_sided_wilcoxon_log": 7.074084714986384e-05
+    }
+   },
+   "collapsed_share_raw_fit": 0.3567567567567568,
+   "collapsed_chi2_raw_median": 3.3095644640041835
+  },
+  "coordinate_rg": {
+   "n": 81,
+   "by_class": {
+    "folded": {
+     "n": 40,
+     "coord_over_exp_median": 0.9076405412296017,
+     "coord_over_exp_ci95": [
+      0.8586474554670364,
+      0.944956415996022
+     ],
+     "curve_over_exp_median": 0.9544384073868029,
+     "curve_over_exp_ci95": [
+      0.9415901311743424,
+      0.9842120624859284
+     ],
+     "curve_over_coord_median": 1.0566783362039454,
+     "curve_over_coord_ci95": [
+      1.0331041048688223,
+      1.0950978942780532
+     ],
+     "p_two_sided_wilcoxon_log_coord_over_exp": 6.718428085150663e-05
+    },
+    "disordered": {
+     "n": 41,
+     "coord_over_exp_median": 1.3541426449480396,
+     "coord_over_exp_ci95": [
+      1.1984828051981715,
+      1.4707050080226545
+     ],
+     "curve_over_exp_median": 1.2094505920036065,
+     "curve_over_exp_ci95": [
+      1.121022086515349,
+      1.2847829410451723
+     ],
+     "curve_over_coord_median": 0.9155561156910864,
+     "curve_over_coord_ci95": [
+      0.8985523771194664,
+      0.9391616717306888
+     ],
+     "p_two_sided_wilcoxon_log_coord_over_exp": 2.108960870828014e-06
+    }
+   }
+  }
+ },
+ "headline_robustness": {
+  "share_raw_fit": {
+   "value": 0.3659147869674185,
+   "ci95": [
+    0.3182957393483709,
+    0.41102756892230574
+   ],
+   "n": 399
+  },
+  "share_raw_fit_by_class": {
+   "disordered": {
+    "value": 0.12195121951219512,
+    "n": 41,
+    "ci95": [
+     0.024390243902439025,
+     0.21951219512195122
+    ]
+   },
+   "folded": {
+    "value": 0.4634146341463415,
+    "n": 246,
+    "ci95": [
+     0.4024390243902439,
+     0.5284552845528455
+    ]
+   },
+   "partly disordered": {
+    "value": 0.24107142857142858,
+    "n": 112,
+    "ci95": [
+     0.16941964285714287,
+     0.32142857142857145
+    ]
+   }
+  },
+  "chi2_raw_median_ci95": [
+   2.633449555970421,
+   4.138567542897896
+  ],
+  "nrmsd": {
+   "definition": "root-mean-square deviation of ln I between the scaled model (chi2-fit scale and background) and the data over points with I > 0, I >= 3 sigma and a positive model, divided by the range of ln I of the data over those points",
+   "by_class": {
+    "disordered": {
+     "n": 41,
+     "nrmsd_raw_median": 0.0307739052094965,
+     "nrmsd_raw_ci95": [
+      0.0253176781472712,
+      0.0398603545962321
+     ],
+     "nrmsd_best_median": 0.0178981381453668,
+     "chi2_raw_median": 8.888180348544271
+    },
+    "folded": {
+     "n": 246,
+     "nrmsd_raw_median": 0.02995670172568945,
+     "nrmsd_raw_ci95": [
+      0.0282576270869458,
+      0.0334372482356494
+     ],
+     "nrmsd_best_median": 0.02570404999565955,
+     "chi2_raw_median": 2.339921817112088
+    },
+    "partly disordered": {
+     "n": 112,
+     "nrmsd_raw_median": 0.03412662042460185,
+     "nrmsd_raw_ci95": [
+      0.029141877877273,
+      0.037108712539601824
+     ],
+     "nrmsd_best_median": 0.024277288109385002,
+     "chi2_raw_median": 4.339804819099893
+    }
+   },
+   "class_order_chi2": [
+    "folded",
+    "partly disordered",
+    "disordered"
+   ],
+   "class_order_nrmsd": [
+    "folded",
+    "disordered",
+    "partly disordered"
+   ],
+   "class_order_holds": false,
+   "spearman_log_chi2_vs_nrmsd": -0.19418634526013528,
+   "model_median_chi2_raw": {
+    "alphafold": 4.560997640025686,
+    "bioemu": 3.319070660973848,
+    "boltz2": 6.782541789889076,
+    "esmfold": 4.963251529951402,
+    "idpfold": 18.286033317849608,
+    "idpsam": 310.46775596064555,
+    "peptron": 4.193234922722412
+   },
+   "model_median_nrmsd_raw": {
+    "alphafold": 0.0369126742549428,
+    "bioemu": 0.0307532308725144,
+    "boltz2": 0.0409619635408281,
+    "esmfold": 0.0384690586181326,
+    "idpfold": 0.0531325800038195,
+    "idpsam": 0.16870501109516775,
+    "peptron": 0.0344911606319646
+   },
+   "model_order_chi2": [
+    "bioemu",
+    "peptron",
+    "alphafold",
+    "esmfold",
+    "boltz2",
+    "idpfold",
+    "idpsam"
+   ],
+   "model_order_nrmsd": [
+    "bioemu",
+    "peptron",
+    "alphafold",
+    "esmfold",
+    "boltz2",
+    "idpfold",
+    "idpsam"
+   ],
+   "model_order_holds": true,
+   "bioemu_first_under_nrmsd": true
+  },
+  "kind_counts_by_phi_threshold": {
+   "0.3": {
+    "raw fit": 146,
+    "modestly reweightable": 107,
+    "strongly reweightable": 76,
+    "target fit not reached": 70
+   },
+   "0.5": {
+    "raw fit": 146,
+    "modestly reweightable": 77,
+    "strongly reweightable": 106,
+    "target fit not reached": 70
+   },
+   "0.7": {
+    "raw fit": 146,
+    "modestly reweightable": 55,
+    "strongly reweightable": 128,
+    "target fit not reached": 70
+   }
+  }
+ }
+}

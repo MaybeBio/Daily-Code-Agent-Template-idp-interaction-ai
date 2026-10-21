@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "Code for Biomolecular Condensation Buffers Global Chain Structure while Enhancing Conformational State Remodeling"
+type: software
+authors:
+  - family-names: Cai
+    given-names: Xuezhen
+  - family-names: Chu
+    given-names: Xiakun
+    email: xiakunchu@hkust-gz.edu.cn
+repository-code: "https://github.com/fancytroture/condensate_simulation_data"
+license: MIT
+version: 1.1.0
+date-released: 2026-10-18

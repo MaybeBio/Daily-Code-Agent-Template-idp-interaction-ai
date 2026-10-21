@@ -1,0 +1,69 @@
+{
+  "release": "2026-10-18",
+  "manuscript_version": "20261017_v15",
+  "numerical_tests": {
+    "intermolecular_contact_and_censoring": 13,
+    "chain_selection_and_mobility": 6,
+    "all_passed": true
+  },
+  "figure_comparisons": {
+    "FigS11.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS12.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS13.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS14.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS15.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS16.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS17.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS2.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS8.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "FigS9.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    },
+    "Fig3.pdf": {
+      "page_size_equal": true,
+      "text_equal": true,
+      "render_equal_at_72dpi": true
+    }
+  },
+  "raw_md_or_vampnet_training_repeated": false,
+  "total_release_bytes": 2423464,
+  "source_and_input_files": 135
+}
